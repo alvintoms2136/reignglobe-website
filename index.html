@@ -35,14 +35,17 @@
         body {
             font-family: 'Manrope', sans-serif;
             color: var(--charcoal);
-            line-height: 1.6;
+            line-height: 1.8;
             overflow-x: hidden;
+            letter-spacing: 0.02em;
+            word-spacing: 0.05em;
         }
 
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Syne', sans-serif;
             font-weight: 700;
-            line-height: 1.2;
+            line-height: 1.4;
+            margin-bottom: 0.75em;
         }
 
         img {
@@ -292,10 +295,11 @@
 
         .hero-content .subheading {
             font-size: clamp(1.1rem, 2vw, 1.5rem);
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.95);
             margin-bottom: 2.5rem;
-            font-weight: 300;
+            font-weight: 400;
             max-width: 600px;
+            line-height: 1.8;
         }
 
         .hero-cta {
@@ -549,9 +553,9 @@
         }
 
         .problem-card p {
-            color: #666;
+            color: #555;
             font-size: 1rem;
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
         /* ===== SOLUTION SECTION ===== */
@@ -778,8 +782,8 @@
 
         .service-content-inner {
             padding: 0 2rem 2rem 5.25rem;
-            color: #555;
-            line-height: 1.8;
+            color: #444;
+            line-height: 1.9;
         }
 
         /* ===== HOW IT WORKS ===== */
@@ -867,8 +871,8 @@
         }
 
         .step-card p {
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.8;
         }
 
         /* ===== PROOF/CASE STUDIES ===== */
@@ -912,11 +916,12 @@
         }
 
         .case-card h4 {
-            font-size: 1rem;
-            color: #888;
+            font-size: 0.875rem;
+            color: #666;
             margin-bottom: 0.5rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            font-weight: 600;
         }
 
         .case-card .challenge {
@@ -927,9 +932,9 @@
         }
 
         .case-card .solution {
-            color: #666;
+            color: #555;
             margin-bottom: 1.5rem;
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
         .case-card .results {
@@ -1145,8 +1150,8 @@
 
         .faq-answer-inner {
             padding: 0 2rem 2rem;
-            color: #666;
-            line-height: 1.8;
+            color: #555;
+            line-height: 1.9;
         }
 
         /* ===== FINAL CTA ===== */
@@ -1239,7 +1244,7 @@
 
         .footer-section p,
         .footer-section a {
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.85);
             text-decoration: none;
             line-height: 1.8;
             transition: color 0.3s ease;
@@ -1368,6 +1373,35 @@
         /* ===== UTILITY ===== */
         .hidden {
             display: none;
+        }
+
+        /* ===== ACCESSIBILITY: FOCUS INDICATORS ===== */
+        a:focus,
+        button:focus,
+        .service-header:focus,
+        .faq-question:focus {
+            outline: 3px solid var(--electric-blue);
+            outline-offset: 3px;
+        }
+
+        a:focus:not(:focus-visible),
+        button:focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid var(--electric-blue);
+            outline-offset: 3px;
+        }
+
+        /* ===== PARAGRAPH SPACING ===== */
+        p {
+            margin-bottom: 1.5em;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
         }
 
         /* ===== SMOOTH ANIMATIONS ===== */
@@ -1627,10 +1661,11 @@
             <div class="case-studies-grid">
                 <div class="case-card">
                     <div class="client-logo">E-Commerce Co</div>
-                    <h4>Challenge</h4>
+                    <h4>The Challenge</h4>
                     <p class="challenge">Manual order processing taking 15+ hours per week</p>
-                    <h4>Solution</h4>
+                    <h4>The Solution</h4>
                     <p class="solution">AI-powered workflow connecting Shopify, inventory, and shipping systems</p>
+                    <h4>The Results</h4>
                     <p class="results">85% time saved, $60K+ annual savings</p>
                     <div class="testimonial">
                         "Game-changer for our operations. We can now handle 3x the orders with the same team."
@@ -1639,10 +1674,11 @@
 
                 <div class="case-card">
                     <div class="client-logo">SaaS Startup</div>
-                    <h4>Challenge</h4>
+                    <h4>The Challenge</h4>
                     <p class="challenge">Customer support overwhelmed with repetitive questions</p>
-                    <h4>Solution</h4>
+                    <h4>The Solution</h4>
                     <p class="solution">24/7 AI chatbot with knowledge base integration and escalation logic</p>
+                    <h4>The Results</h4>
                     <p class="results">70% query resolution, 90% customer satisfaction</p>
                     <div class="testimonial">
                         "Our support team can finally focus on complex issues while AI handles the basics flawlessly."
@@ -1651,10 +1687,11 @@
 
                 <div class="case-card">
                     <div class="client-logo">Marketing Agency</div>
-                    <h4>Challenge</h4>
+                    <h4>The Challenge</h4>
                     <p class="challenge">Manual reporting consuming billable hours each week</p>
-                    <h4>Solution</h4>
+                    <h4>The Solution</h4>
                     <p class="solution">Automated dashboard pulling data from Google Analytics, Meta, and CRM</p>
+                    <h4>The Results</h4>
                     <p class="results">12 hours saved weekly, happier clients</p>
                     <div class="testimonial">
                         "Reports that used to take hours now generate instantly. Our clients love the real-time insights."
